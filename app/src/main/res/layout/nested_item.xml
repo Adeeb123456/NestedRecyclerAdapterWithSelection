@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:id="@+id/itemNested">
 
     <TextView
         android:id="@+id/date"
@@ -24,4 +27,15 @@
         android:visibility="gone">
 
     </android.support.v7.widget.RecyclerView>
+
+
+    <playmzubair.com.recycleradapterwithselection.view.SmoothCheckBox
+        android:id="@+id/checkBox"
+        style="@style/SmoothCheckBoxStyle"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible" />
+
 </RelativeLayout>

@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#0022ff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="ic_check">#b429efe5</color>
+    <color name="checkbox_color">#FB4846</color>
+    <color name="checkbox_unchecked_color">#DFDFDF</color>
+    <color name="text_date_color">#706f6f</color>
+    <color name="whiteAccent">#fff</color>
+    <color name="actionModeBackground">#f3009951</color>
+    <color name="selectionBackground">#1f000000</color>
+    <color name="thumbnailColor">#999</color>
+    <color name="whiteTextShadowColor">#999</color>
+    <color name="videoTextColor">@android:color/white</color>
+    <color name="ic_grey">#bfbfbf</color>
+    <color name="headerBackground">#eeeeee</color>
+    <color name="colorError">#D50000</color>
+    <color name="colorErrorDark">#ff5f5f</color>
+    <color name="colorSuccess">#1B5E20</color>
+    <color name="colorSuccessDark">#3bc746</color>
+    <color name="rippelColor">#ead831</color>
+    <color name="custom_progress_background">#ff3c3a3b</color>
+    <color name="custom_progress_orange_progress">#ffff8800</color>
+    <color name="custom_progress_green_progress">#ff669900</color>
 </resources>

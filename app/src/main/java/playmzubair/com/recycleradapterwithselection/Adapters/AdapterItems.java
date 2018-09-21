@@ -1,5 +1,6 @@
 package playmzubair.com.recycleradapterwithselection.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.DividerItemDecoration;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import playmzubair.com.recycleradapterwithselection.DataManager;
+import playmzubair.com.recycleradapterwithselection.ItemNestedModel;
 import playmzubair.com.recycleradapterwithselection.R;
 import playmzubair.com.recycleradapterwithselection.itemModel;
 
@@ -25,11 +27,11 @@ public class AdapterItems extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     ArrayList<itemModel> itemModels;
     AdapterItemsNested adapterItemsNested;
     LinearLayoutManager linearLayoutManager;
-    Context context;
-    public AdapterItems(Context context, ArrayList<itemModel> itemModels) {
+    Activity context;
+    public AdapterItems(Activity context, ArrayList<itemModel> itemModels) {
         super();
         this.itemModels=itemModels;
-        adapterItemsNested=new AdapterItemsNested(new DataManager().getSubItems());
+        adapterItemsNested=new AdapterItemsNested(context,new DataManager().getSubItems());
         this.context=context;
 
     }
@@ -97,17 +99,28 @@ public TextView textView;
         for(itemModel model:itemModels){
             model.setSelected(false);
         }
-
+  adapterItemsNested.unSelectAllItems();
 
     }
 
 
 
     public void setChecked(int i){
-       getItems().get(i).setSelected(!getItems().get(i).isSelected());
+       adapterItemsNested.setChecked(i);
     }
 
     public ArrayList<itemModel> getItems(){
         return itemModels;
     }
-}
+
+
+
+
+    public ArrayList<ItemNestedModel> getSelectedItems(){
+
+        return adapterItemsNested.getSelectedItems();
+
+
+    }
+
+    }

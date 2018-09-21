@@ -1,5 +1,7 @@
 package playmzubair.com.recycleradapterwithselection;
 
+import android.media.MediaPlayer;
+
 import java.util.ArrayList;
 
 /**
@@ -7,7 +9,7 @@ import java.util.ArrayList;
  */
 
 public class ItemNestedModel extends itemModel {
-    String date;
+   public String date;
    String weight;
 
 
@@ -18,4 +20,31 @@ public class ItemNestedModel extends itemModel {
        this.date=date;
        this.weight=weight;
    }
+
+
+    public void setImgUrl(int imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public void setMediaPlayer(MediaPlayer mediaPlayer) {
+        this.mediaPlayer = mediaPlayer;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+
+
+    public int getImgUrl() {
+        return imgUrl;
+    }
+
+    public MediaPlayer getMediaPlayer() {
+        return mediaPlayer;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
 }
